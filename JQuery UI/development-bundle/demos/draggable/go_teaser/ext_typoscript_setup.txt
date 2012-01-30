@@ -1,0 +1,34 @@
+
+#Default Header delete
+tt_content.go_teaser_piTextLinkTeaser.10 >
+tt_content.go_teaser_piBoxTeaser.10 >
+page.includeCSS.go_teaser_piBoxTeaser = EXT:go_teaser/res/piBoxTeaser.css
+
+
+
+# max width for teaser image
+plugin.tx_goteaser_piScaledImageTeaser.imgWidth = 148c
+
+
+
+# box teaser image sizes
+
+# Beispiele
+#plugin.tx_goteaser_piBoxTeaser.layout_1.fg.width = 235
+#plugin.tx_goteaser_piBoxTeaser.layout_1.fg.height = 170
+#plugin.tx_goteaser_piBoxTeaser.layout_1.fg.width = 235c
+#plugin.tx_goteaser_piBoxTeaser.layout_1.fg.height = 170c
+#plugin.tx_goteaser_piBoxTeaser.layout_2.fg.maxW = 237
+#plugin.tx_goteaser_piBoxTeaser.layout_2.fg.maxH = 178
+
+plugin.tx_goteaser_piBoxTeaser.layout_1.fg.maxW = 372
+plugin.tx_goteaser_piBoxTeaser.layout_2.fg.maxW = 372
+plugin.tx_goteaser_piBoxTeaser.layout_3.fg.maxW = 372
+plugin.tx_goteaser_piBoxTeaser.layout_4.fg.maxW = 372
+plugin.tx_goteaser_piBoxTeaser.layout_5.fg.maxW = 745
+
+plugin.tx_goteaser_piBoxTeaser.layout_7.fg.maxW = 144c
+plugin.tx_goteaser_piBoxTeaser.layout_7.fg.maxH = 205c
+
+plugin.tx_goteaser_piBoxTeaser.layout_8.fg.width = 225c
+plugin.tx_goteaser_piBoxTeaser.layout_8.fg.height = 170c

@@ -1,0 +1,13 @@
+
+
+// #
+// ### piMohsin
+// #
+$TCA['tt_content']['types'][$_EXTKEY . '_piMohsin']['showitem'] = 'CType;;;button;1-1-1
+
+																			';
+t3lib_extMgm::addPlugin(array(
+	'LLL:EXT:go_mohsin/locallang_db.xml:tt_content.piMohsin.CType',
+	$_EXTKEY . '_piMohsin',
+	t3lib_extMgm::extRelPath($_EXTKEY) . 'piMohsin/icon.gif')
+,'CType');

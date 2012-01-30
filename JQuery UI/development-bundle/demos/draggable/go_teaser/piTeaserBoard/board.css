@@ -1,0 +1,16 @@
+.teaserBoardTable {
+	margin-top:11px;
+}
+.teaserBoardContainer .teaserBoardHeading {
+	font-size: 16px;
+	padding-left: 17px;
+	word-spacing: 2px;
+	font-family: 'AvantGardeGothicITCW01B 731069';
+}
+.teaserBoardTable .teaserBoardColumn {
+	padding-left: 18px;
+	padding-bottom: 1px;
+}
+.teaserBoardImage .teaserImage{
+ padding-bottom: 17px;
+}

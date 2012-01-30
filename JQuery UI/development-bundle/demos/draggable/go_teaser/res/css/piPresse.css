@@ -1,0 +1,19 @@
+.tx-goteaser-piPresse .presseHeading
+{
+	font-family: 'AvantGardeGothicITCW01B 731069';
+	color: #008093;
+    font-size: 16px;
+    padding-left: 36px;
+    padding-top: 6px;
+}
+
+.tx-goteaser-piPresse p
+{
+	font-family: 'AvantGardeGothicITCW01B 731069';
+	color: #5B5B5B;
+    font-size: 12px;
+    padding-left: 34px;
+    padding-top: 4px;
+	line-height: 17px;
+	padding-bottom: 15px;
+}

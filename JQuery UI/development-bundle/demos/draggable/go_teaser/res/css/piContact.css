@@ -1,0 +1,18 @@
+.tx-goteaser-piContact {
+padding-left: 28px;
+ padding-top: 20px;
+}
+
+.tx-goteaser-piContact p {
+	font-family: 'AvantGardeGothicITCW01B 731069';
+	font-size: 12px;
+	padding-left: 7px;
+	line-height: 18px;
+	width: 589px;
+	color: #5B5B5B;
+	word-spacing: 0px;
+}
+.tx-goteaser-piContact a {
+	color:#008093;
+	text-decoration: underline;
+}

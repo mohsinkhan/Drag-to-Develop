@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Draggable + Sortable</title>
+	<link rel="stylesheet" href="../../themes/ui-lightness/jquery-ui-1.8.16.custom.css">
+	<script src="../../jquery-1.6.2.js"></script>
+	<script src="../../ui/jquery.ui.core.js"></script>
+	<script src="../../ui/jquery.ui.widget.js"></script>
+	<script src="../../ui/jquery.ui.mouse.js"></script>
+	<script src="../../ui/jquery.ui.draggable.js"></script>
+	<script src="../../ui/jquery.ui.sortable.js"></script>
+	<link rel="stylesheet" href="../demos.css">
+	<style>
+	.demo ul { list-style-type: none; margin: 0; padding: 0; margin-bottom: 10px; }
+	.demo li { margin: 5px; padding: 5px; width: auto; }
+    #elements{width: 100px; float: left;}
+    #sortable{
+        float:  right;
+        width: 436px;
+        border: 1px solid black;
+    }
+    .demo{
+        width: 550px;
+    }
+    #elements .data{
+        display: none;
+    }
+    #sortable .delete{
+        width: 17px;
+    }
+
+	</style>
+	<script>
+	$(function() {
+		$( "#sortable" ).sortable({
+			revert: true
+		});
+		$( ".ui-state-highlight" ).draggable({
+			connectToSortable: "#sortable",
+			helper: "clone",
+			revert: "invalid",
+		});
+		$( "ul, li" ).disableSelection();
+
+        $('.delete').live('click',function(){
+            $(this).parent().parent().hide(500,function(){
+                $(this).remove();
+            });
+        });
+	});
+	</script>
+</head>
+<body>
+
+<div class="demo">
+<ul id="elements">
+	<li id="draggable" class="ui-state-highlight">
+        <div class="elementName">Divider Tab</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+            <div class="form">
+                Title : <input type="text" name="--div--" /> MarkerName: <input type="hidden" name="--div--Marker" /><input type="hidden" name="notUsed1" value="NULL">
+            </div>
+        </div>
+    </li>
+	<li id="draggable" class="ui-state-highlight">
+        <div class="elementName">text_1</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+            <div class="form">
+                Title : <input type="text" name="text_1" /> MarkerName: <input type="text" name="text_1Marker" /> Make RTE <input type="radio" value="yes" name="text_1RTE" /> Make Simple <input type="radio" checked="checked" value="no" name="text_1RTE" />
+            </div>
+        </div>
+    </li>
+    <li id="draggable" class="ui-state-highlight">
+        <div class="elementName">text_2</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+            <div class="form">
+                Title : <input type="text" name="text_2" />MarkerName: <input type="text" name="text_2Marker" /> Make RTE <input type="radio" value="yes" name="text_2RTE" /> Make Simple <input type="radio" value="no" name="text_2RTE" />
+            </div>
+        </div>
+    </li>
+    <li id="draggable" class="ui-state-highlight">
+        <div class="elementName">text_3</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+            <div class="form">
+                Title : <input type="text" name="text_3" />MarkerName: <input type="text" name="text_3Marker" /> Make RTE <input type="radio" value="yes" name="text_3RTE" /> Make Simple <input type="radio" value="no" name="text_3RTE" />
+            </div>
+        </div>
+    </li>
+    <li id="draggable" class="ui-state-highlight">
+        <div class="elementName">text_4</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+			<div class="form">
+                Title : <input type="text" name="text_4" />MarkerName: <input type="text" name="text_4Marker" /> Make RTE <input type="radio" value="yes" name="text_4RTE" /> Make Simple <input type="radio" value="no" name="text_4RTE" />
+            </div>
+        </div>
+    </li>
+    <li id="draggable" class="ui-state-highlight">
+        <div class="elementName">text_5</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+			<div class="form">
+				Title : <input type="text" name="text_5" />MarkerName: <input type="text" name="text_5Marker" /> Make RTE <input type="radio" value="yes" name="text_5RTE" /> Make Simple <input type="radio" value="no" name="text_5RTE" />
+            </div>
+        </div>
+    </li>
+    <li id="draggable" class="ui-state-highlight">
+        <div class="elementName">text_6</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+			<div class="form">
+                Title : <input type="text" name="text_6" />MarkerName: <input type="text" name="text_6Marker" /> Make RTE <input type="radio" value="yes" name="text_6RTE" /> Make Simple <input type="radio" value="no" name="text_6RTE" />
+            </div>
+        </div>
+    </li>
+    <li id="draggable" class="ui-state-highlight">
+        <div class="elementName">singleimage_1</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+			<div class="form">
+                Title : <input type="text" name="singleimage_1" />MarkerName: <input type="text" name="singleimage_1Marker" /> Need Link of Image <input type="radio" value="yes" name="singleimage_1LINK" />Need IMG Tag <input type="radio" value="no" name="singleimage_1LINK" />
+            </div>
+        </div>
+    </li>
+    <li id="draggable" class="ui-state-highlight">
+        <div class="elementName">singleimage_2</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+			<div class="form">
+                Title : <input type="text" name="singleimage_2" />MarkerName: <input type="text" name="singleimage_2Marker" /> Need Link of Image <input type="radio" value="yes" name="singleimage_2LINK" /> Need IMG Tag <input type="radio" value="no" name="singleimage_2LINK" />
+            </div>
+        </div>
+    </li>
+    <li id="draggable" class="ui-state-highlight">
+        <div class="elementName">singleimage_3</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+			<div class="form">
+                Title : <input type="text" name="singleimage_3" />MarkerName: <input type="text" name="singleimage_3Marker" /> Need Link of Image <input type="radio" value="yes" name="singleimage_3LINK" /> Need IMG Tag <input type="radio" value="no" name="singleimage_3LINK" />
+            </div>
+        </div>
+    </li>
+    <li id="draggable" class="ui-state-highlight">
+        <div class="elementName">singleimage_4</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+			<div class="form">
+                Title : <input type="text" name="singleimage_4" />MarkerName: <input type="text" name="singleimage_4Marker" /> Need Link of Image <input type="radio" value="yes" name="singleimage_4LINK" /> Need IMG Tag <input type="radio" value="no" name="singleimage_4LINK" />
+            </div>
+        </div>
+    </li>
+    <li id="draggable" class="ui-state-highlight">
+        <div class="elementName">singleimage_5</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+			<div class="form">
+                Title : <input type="text" name="singleimage_5" />MarkerName: <input type="text" name="singleimage_5Marker" /> Need Link of Image <input type="radio" value="yes" name="singleimage_5LINK" /> Need IMG Tag <input type="radio" value="no" name="singleimage_5LINK" />
+            </div>
+        </div>
+    </li>
+    <li id="draggable" class="ui-state-highlight">
+        <div class="elementName">singleimage_6</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+			<div class="form">
+                Title : <input type="text" name="singleimage_6" />MarkerName: <input type="text" name="singleimage_6Marker" /> Need Link of Image <input type="radio" value="yes" name="singleimage_6LINK" /> Need IMG Tag <input type="radio" value="no" name="singleimage_6LINK" />
+            </div>
+        </div>
+    </li>
+    <li id="draggable" class="ui-state-highlight">
+        <div class="elementName">singlefile_1</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+			<div class="form">
+                Title : <input type="text" name="singlefile_1" />MarkerName: <input type="text" name="singlefile_1Marker" /> <input type="hidden" name="notUsed2" value="NULL">
+            </div>
+        </div>
+    </li>
+    <li id="draggable" class="ui-state-highlight">
+        <div class="elementName">singlefile_2</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+			<div class="form">
+                Title : <input type="text" name="singlefile_2" />MarkerName: <input type="text" name="singlefile_2Marker" /><input type="hidden" name="notUsed3" value="NULL">
+            </div>
+        </div>
+    </li>
+    <li id="draggable" class="ui-state-highlight">
+        <div class="elementName">singlefile_3</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+			<div class="form">
+                Title : <input type="text" name="singlefile_3" />MarkerName: <input type="text" name="singlefile_3Marker" /><input type="hidden" name="notUsed4" value="NULL">
+            </div>
+        </div>
+    </li>
+    <li id="draggable" class="ui-state-highlight">
+        <div class="elementName">singlefile_4</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+			<div class="form">
+                Title : <input type="text" name="singlefile_4" />MarkerName: <input type="text" name="singlefile_4Marker" /><input type="hidden" name="notUsed5" value="NULL">
+            </div>
+        </div>
+    </li>
+    <li id="draggable" class="ui-state-highlight">
+        <div class="elementName">singlefile_5</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+			<div class="form">
+                Title : <input type="text" name="singlefile_5" />MarkerName: <input type="text" name="singlefile_5Marker" /><input type="hidden" name="notUsed6" value="NULL">
+            </div>
+        </div>
+    </li>
+    <li id="draggable" class="ui-state-highlight">
+        <div class="elementName">singlefile_6</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+			<div class="form">
+                Title : <input type="text" name="singlefile_6" />MarkerName: <input type="text" name="singlefile_6Marker" /><input type="hidden" name="notUsed7" value="NULL">
+            </div>
+        </div>
+    </li>
+    <li id="draggable" class="ui-state-highlight">
+        <div class="elementName">input_1</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+			<div class="form">
+                Title : <input type="text" name="input_1" />MarkerName: <input type="text" name="input_1Marker" /><input type="hidden" name="notUsed8" value="NULL">
+            </div>
+        </div>
+    </li>    
+	<li id="draggable" class="ui-state-highlight">
+        <div class="elementName">input_2</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+			<div class="form">
+                Title : <input type="text" name="input_2" />MarkerName: <input type="text" name="input_2Marker" /><input type="hidden" name="notUsed9" value="NULL">
+            </div>
+        </div>
+    </li>
+    <li id="draggable" class="ui-state-highlight">
+        <div class="elementName">input_3</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+			<div class="form">
+                Title : <input type="text" name="input_3" />MarkerName: <input type="text" name="input_3Marker" /><input type="hidden" name="notUsed10" value="NULL">
+            </div>
+        </div>
+    </li>
+    <li id="draggable" class="ui-state-highlight">
+        <div class="elementName">input_4</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+			<div class="form">
+                Title : <input type="text" name="input_4" />MarkerName: <input type="text" name="input_4Marker" /><input type="hidden" name="notUsed11" value="NULL">
+            </div>
+        </div>
+    </li>
+    <li id="draggable" class="ui-state-highlight">
+        <div class="elementName">input_5</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+			<div class="form">
+                Title : <input type="text" name="input_5" />MarkerName: <input type="text" name="input_5Marker" /><input type="hidden" name="notUsed12" value="NULL">
+            </div>
+        </div>
+    </li>
+    <li id="draggable" class="ui-state-highlight">
+        <div class="elementName">input_6</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+			<div class="form">
+                Title : <input type="text" name="input_6" />MarkerName: <input type="text" name="input_6Marker" /><input type="hidden" name="notUsed13" value="NULL">
+            </div>
+        </div>
+    </li>
+    <li id="draggable" class="ui-state-highlight">
+        <div class="elementName">link_1</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+			<div class="form">
+                Title : <input type="text" name="link_1" />MarkerName: <input type="text" name="link_1Marker" /><input type="hidden" name="notUsed14" value="NULL">
+            </div>
+        </div>
+    </li>    
+	<li id="draggable" class="ui-state-highlight">
+        <div class="elementName">link_2</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+			<div class="form">
+                Title : <input type="text" name="link_2" />MarkerName: <input type="text" name="link_2Marker" /><input type="hidden" name="notUsed15" value="NULL">
+            </div>
+        </div>
+    </li>
+    <li id="draggable" class="ui-state-highlight">
+        <div class="elementName">link_3</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+			<div class="form">
+                Title : <input type="text" name="link_3" />MarkerName: <input type="text" name="link_3Marker" /><input type="hidden" name="notUsed16" value="NULL">
+            </div>
+        </div>
+    </li>
+    <li id="draggable" class="ui-state-highlight">
+        <div class="elementName">link_4</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+			<div class="form">
+                Title : <input type="text" name="link_4" />MarkerName: <input type="text" name="link_4Marker" /><input type="hidden" name="notUsed17" value="NULL">
+            </div>
+        </div>
+    </li>
+    <li id="draggable" class="ui-state-highlight">
+        <div class="elementName">link_5</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+			<div class="form">
+                Title : <input type="text" name="link_5" />MarkerName: <input type="text" name="link_5Marker" /><input type="hidden" name="notUsed18" value="NULL">
+            </div>
+        </div>
+    </li>
+    <li id="draggable" class="ui-state-highlight">
+        <div class="elementName">link_6</div>
+        <div class="data">
+            <div class="ui-state-default ui-corner-all delete" title=".ui-icon-closethick">
+                <div class="ui-icon ui-icon-closethick"></div>
+            </div>
+			<div class="form">
+                Title : <input type="text" name="link_6" />MarkerName: <input type="text" name="link_6Marker" /><input type="hidden" name="notUsed19" value="NULL">
+            </div>
+        </div>
+    </li>
+</ul>
+
+<form name="f1" action="data.php" method="GET">
+	<ul id="sortable">
+		<li class="ui-state-default">Drag elements hare</li>
+
+	</ul>
+	Extension Name : <input type="text" name="extName" /><br />
+	Element Name : <input type="text" name="piName" /><br />
+	<input type="submit" name="submit" value="Submit" />
+</form>
+</div><!-- End demo -->
+</body>
+</html>

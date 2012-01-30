@@ -1,0 +1,30 @@
+<!-- ###TEMPLATE_LAYOUT### BEGIN -->
+<div id="fblikebutton">
+	<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2F3idiots.net&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:85px; height:21px;">
+	</iframe>
+</div>
+	<div id="addThis">
+	<a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pubid=xa-4ee1fed42f211ea0"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4ee1fed42f211ea0"></script>
+</div>
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		$('.facebookLike').css('left',($('#fblikebutton').offset().left - 145)+'px');
+			$('#fblikebutton').hover(
+			function(){ 
+				$('.facebookLike').show();
+			},
+			function(){ 
+				$('.facebookLike').hide();
+			}
+		);
+	});
+</script>
+<div class="facebookLike">
+	<div class="facebookLikeWrapper">
+		<h2>Sie verlassen jetzt die COMPEED&reg; Website!</h2>
+		<p>Mit dem Link 'Gefallt mir' der Firma Facebook Inc, USA verlassen Sie unsere Website. Bitte beachten Sie, dass dieser Link eine Website offnet, fur deren Inhalt wir nicht verantwortlich sind und auf die unsere Datenschutzbestimmungen keine Anwendung finden.</p>
+	</div>
+</div>
+<!-- ###TEMPLATE_LAYOUT### END -->
+
